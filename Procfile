@@ -1,3 +1,3 @@
 release: python manage.py makemigrations
 release: python manage.py migrate
-web: gunicorn src/app.wsgi --log-file -
+web: python src/app/manage.py runserver 0.0.0.0:$PORT
